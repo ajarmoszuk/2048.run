@@ -8,5 +8,5 @@ endif
 all: build
 
 build: Makefile Dockerfile
-	$(DOCKER_BUILD) -t falkenssmaze/redditbox .
+	$(DOCKER_BUILD) -t falkenssmaze/2048.run .
 	@echo "Done!"
