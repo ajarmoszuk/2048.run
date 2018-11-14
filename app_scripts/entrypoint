@@ -1,0 +1,10 @@
+#!/bin/bash
+cd /app/
+
+if [ ! -f /app/id_rsa ]; then
+    dropbearkey -t rsa -f "id_rsa"
+fi
+
+service xinetd start
+screen -d -m /app/server
+caddy -agree
